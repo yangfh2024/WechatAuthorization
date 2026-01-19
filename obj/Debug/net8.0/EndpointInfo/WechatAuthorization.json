@@ -1,0 +1,41 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "wechatauthorization",
+    "version": "1.0"
+  },
+  "paths": {
+    "/wechatauthorization": {
+      "get": {
+        "tags": [
+          "wechatauthorization"
+        ],
+        "operationId": "Getwechatauthorization",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "wechatauthorization"
+        ],
+        "operationId": "Postwechatauthorization",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": { }
+}

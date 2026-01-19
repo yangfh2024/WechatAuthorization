@@ -1,0 +1,12 @@
+C:\Users\yangfh\source\repos\WechatAuthorization\obj\Docker\publish\wechatauthorization.exe
+C:\Users\yangfh\source\repos\WechatAuthorization\obj\Docker\publish\appsettings.Development.json
+C:\Users\yangfh\source\repos\WechatAuthorization\obj\Docker\publish\appsettings.json
+C:\Users\yangfh\source\repos\WechatAuthorization\obj\Docker\publish\wechatauthorization.dll
+C:\Users\yangfh\source\repos\WechatAuthorization\obj\Docker\publish\wechatauthorization.deps.json
+C:\Users\yangfh\source\repos\WechatAuthorization\obj\Docker\publish\wechatauthorization.runtimeconfig.json
+C:\Users\yangfh\source\repos\WechatAuthorization\obj\Docker\publish\wechatauthorization.pdb
+C:\Users\yangfh\source\repos\WechatAuthorization\obj\Docker\publish\Microsoft.AspNetCore.OpenApi.dll
+C:\Users\yangfh\source\repos\WechatAuthorization\obj\Docker\publish\Microsoft.OpenApi.dll
+C:\Users\yangfh\source\repos\WechatAuthorization\obj\Docker\publish\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\yangfh\source\repos\WechatAuthorization\obj\Docker\publish\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\yangfh\source\repos\WechatAuthorization\obj\Docker\publish\Swashbuckle.AspNetCore.SwaggerUI.dll

@@ -1,0 +1,103 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\yangfh\\source\\repos\\WechatAuthorization\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0E0FC820-6BBF-4FB8-9193-A77FA4DB6F60}|wechatauthorization.csproj|c:\\users\\yangfh\\source\\repos\\wechatauthorization\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{0E0FC820-6BBF-4FB8-9193-A77FA4DB6F60}|wechatauthorization.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E0FC820-6BBF-4FB8-9193-A77FA4DB6F60}|wechatauthorization.csproj|c:\\users\\yangfh\\source\\repos\\wechatauthorization\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{0E0FC820-6BBF-4FB8-9193-A77FA4DB6F60}|wechatauthorization.csproj|solutionrelative:dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E0FC820-6BBF-4FB8-9193-A77FA4DB6F60}|wechatauthorization.csproj|c:\\users\\yangfh\\source\\repos\\wechatauthorization\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0E0FC820-6BBF-4FB8-9193-A77FA4DB6F60}|wechatauthorization.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E0FC820-6BBF-4FB8-9193-A77FA4DB6F60}|wechatauthorization.csproj|c:\\users\\yangfh\\source\\repos\\wechatauthorization\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{0E0FC820-6BBF-4FB8-9193-A77FA4DB6F60}|wechatauthorization.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E0FC820-6BBF-4FB8-9193-A77FA4DB6F60}|wechatauthorization.csproj|c:\\users\\yangfh\\source\\repos\\wechatauthorization\\wechatauthorization.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{0E0FC820-6BBF-4FB8-9193-A77FA4DB6F60}|wechatauthorization.csproj|solutionrelative:wechatauthorization.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\yangfh\\source\\repos\\WechatAuthorization\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\yangfh\\source\\repos\\WechatAuthorization\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAkwA4AAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-01-18T08:01:43.194Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\yangfh\\source\\repos\\WechatAuthorization\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\yangfh\\source\\repos\\WechatAuthorization\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABYAAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-18T13:46:22.651Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Dockerfile",
+              "DocumentMoniker": "C:\\Users\\yangfh\\source\\repos\\WechatAuthorization\\Dockerfile",
+              "RelativeDocumentMoniker": "Dockerfile",
+              "ToolTip": "C:\\Users\\yangfh\\source\\repos\\WechatAuthorization\\Dockerfile",
+              "RelativeToolTip": "Dockerfile",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-01-18T12:30:55.878Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "wechatauthorization.csproj",
+              "DocumentMoniker": "C:\\Users\\yangfh\\source\\repos\\WechatAuthorization\\wechatauthorization.csproj",
+              "RelativeDocumentMoniker": "wechatauthorization.csproj",
+              "ToolTip": "C:\\Users\\yangfh\\source\\repos\\WechatAuthorization\\wechatauthorization.csproj",
+              "RelativeToolTip": "wechatauthorization.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-01-18T12:32:03.704Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\yangfh\\source\\repos\\WechatAuthorization\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\yangfh\\source\\repos\\WechatAuthorization\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Properties\\launchSettings.json",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAYwCkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-01-18T12:31:47.707Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

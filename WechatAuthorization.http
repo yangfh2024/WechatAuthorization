@@ -1,0 +1,6 @@
+@wechatauthorization_HostAddress = http://localhost:5125
+
+GET {{wechatauthorization_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

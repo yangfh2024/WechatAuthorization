@@ -1,0 +1,41 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "WechatAuthorization",
+    "version": "1.0"
+  },
+  "paths": {
+    "/wechatauthorization": {
+      "get": {
+        "tags": [
+          "WechatAuthorization"
+        ],
+        "operationId": "GetWechatauthorization",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "WechatAuthorization"
+        ],
+        "operationId": "PostWechatauthorization",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": { }
+}
