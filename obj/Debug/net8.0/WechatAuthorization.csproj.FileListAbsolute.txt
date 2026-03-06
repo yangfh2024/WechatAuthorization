@@ -34,3 +34,6 @@ C:\Users\yangfh\source\repos\WechatAuthorization\obj\Debug\net8.0\WechatAuthoriz
 C:\Users\yangfh\source\repos\WechatAuthorization\obj\Debug\net8.0\WechatAuthorization.genruntimeconfig.cache
 C:\Users\yangfh\source\repos\WechatAuthorization\obj\Debug\net8.0\ref\WechatAuthorization.dll
 C:\Users\yangfh\source\repos\WechatAuthorization\obj\Debug\net8.0\wechatau.5240926E.Up2Date
+C:\Users\yangfh\source\repos\WechatAuthorization\obj\Debug\net8.0\wechatauthorization.sourcelink.json
+C:\Users\yangfh\source\repos\WechatAuthorization\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\yangfh\source\repos\WechatAuthorization\bin\Debug\net8.0\Qiniu.dll

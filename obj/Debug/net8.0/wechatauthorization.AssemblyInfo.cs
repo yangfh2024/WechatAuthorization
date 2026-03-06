@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("wechatauthorization")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8637f85c0afe18f52b16e03de0270610df51e2ea")]
 [assembly: System.Reflection.AssemblyProductAttribute("wechatauthorization")]
 [assembly: System.Reflection.AssemblyTitleAttribute("wechatauthorization")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,4 +1,8 @@
-﻿using System.Security.Cryptography;
+﻿using Qiniu.Http;
+using Qiniu.IO;
+using Qiniu.IO.Model;
+using Qiniu.Util;
+using System.Security.Cryptography;
 using System.Text;
 using System.Text.Json;
 using System.Xml.Linq;
@@ -15,13 +19,7 @@ builder.Services.AddHttpClient("n8n", client =>
 });
 var app = builder.Build();
 
-//// 从配置读取 WeChat 配置（支持 appsettings.json、环境变量和用户机密）
-//var wechatToken = app.Configuration["WeChat:Token"] ?? string.Empty;
-//var wechatCorpId = app.Configuration["WeChat:CorpId"] ?? string.Empty;
-//var wechatEncodingAESKey = app.Configuration["WeChat:EncodingAESKey"] ?? string.Empty;
-//var PassText = app.Configuration["WeChat:PassText"] ?? string.Empty;
-//var UnpassText = app.Configuration["WeChat:UnpassText"] ?? string.Empty;
-//var n8nURL = app.Configuration["WeChat:n8nURL"] ?? string.Empty;
+
 
 var wechatToken = Environment.GetEnvironmentVariable("WECHAT_TOKEN");
 var wechatCorpId = Environment.GetEnvironmentVariable("WECHAT_CORP_ID");
@@ -30,6 +28,27 @@ var PassText = Environment.GetEnvironmentVariable("WECHAT_PASS_TEXT");
 var UnpassText = Environment.GetEnvironmentVariable("WECHAT_UNPASS_TEXT");
 var n8nURL = Environment.GetEnvironmentVariable("WECHAT_N8N_URL");
 
+var qianNiuAccessKey = Environment.GetEnvironmentVariable("QianNiu_AK");
+var qianNiuScrectKey = Environment.GetEnvironmentVariable("QianNiu_SK");
+var qianNiuBucket = Environment.GetEnvironmentVariable("QianNiu_Bucket"); 
+var qianNiuCDN = Environment.GetEnvironmentVariable("QianNiu_CDN");
+
+if (app.Environment.IsDevelopment())
+{
+    // 从配置读取 WeChat 配置（支持 appsettings.json、环境变量和用户机密）
+     wechatToken = app.Configuration["WeChat:Token"] ?? string.Empty;
+     wechatCorpId = app.Configuration["WeChat:CorpId"] ?? string.Empty;
+     wechatEncodingAESKey = app.Configuration["WeChat:EncodingAESKey"] ?? string.Empty;
+     PassText = app.Configuration["WeChat:PassText"] ?? string.Empty;
+     UnpassText = app.Configuration["WeChat:UnpassText"] ?? string.Empty;
+     n8nURL = app.Configuration["WeChat:n8nURL"] ?? string.Empty;
+
+    qianNiuAccessKey = app.Configuration["QianNiu:AK"] ?? string.Empty;
+    qianNiuScrectKey = app.Configuration["QianNiu:SK"] ?? string.Empty;
+    qianNiuBucket = app.Configuration["QianNiu:Bucket"] ?? string.Empty;
+    qianNiuCDN = app.Configuration["QianNiu:CDN"] ?? string.Empty;
+     
+}
 // Configure the HTTP request pipeline.
 //if ((app.Environment.IsDevelopment() || app.Environment.IsEnvironment("Docker")))
 {
@@ -272,6 +291,58 @@ app.MapPost("/wechatauthorization", async (HttpRequest request, IHttpClientFacto
  .WithName("Postwechatauthorization")
  .WithOpenApi();
 
+app.MapPost("/uploadImage", async (HttpContext context) =>
+{
+    var request = context.Request;
+    var form = await request.ReadFormAsync();
+    var file = form.Files[0];
+    string accessKey = qianNiuAccessKey;
+    string secretKey = qianNiuScrectKey;
+    string bucket = qianNiuBucket;
+    string cdn = qianNiuCDN;
+
+    Mac mac = new Mac(accessKey, secretKey);
+
+    var tempFile = Path.GetTempFileName();
+
+    using (var stream = new FileStream(tempFile, FileMode.Create))
+    {
+        await file.CopyToAsync(stream);
+    }
+    // 接收 form-data 的 key
+    string key = request.Form["key"];
+
+    if (string.IsNullOrEmpty(key))
+    {
+        key = Guid.NewGuid() + Path.GetExtension(file.FileName);
+    } 
+
+    // 配置上传域名为 up-z2.qiniup.com
+    Qiniu.Common.Config.SetZone(Qiniu.Common.ZoneID.CN_South, false);
+    var cfg = new Qiniu.Common.Config();
+
+    PutPolicy putPolicy = new PutPolicy();
+    putPolicy.Scope = bucket;
+    putPolicy.SetExpires(3600);
+    putPolicy.DeleteAfterDays = 1;
+
+    string jstr = putPolicy.ToJsonString();
+    string token = Auth.CreateUploadToken(mac, jstr);
+
+    UploadManager um = new UploadManager();
+    HttpResult result = um.UploadFile(tempFile, key, token);
+    string url = cdn+ "/" + key; 
+
+    // 删除临时文件
+    File.Delete(tempFile);
+
+    return Results.Json(new
+    {
+        success = true,
+        url = url,
+        key = key
+    });
+});
 app.Run();
 
 internal record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
